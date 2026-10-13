@@ -29,7 +29,26 @@ print("el mensaje en mayusculas es:" + mensaje_mayusculas)
 mensaje_minusculas=mensaje.lower()
 print("el mensaje en minusculas es:" + mensaje_minusculas)
 
+#para reemplzar una palabra por otra jeje 
 comunicado="los jedi son enviados a naboo"
 print("el comunicado es:" + comunicado)
 comunicado_reemplazado=comunicado.replace("jedi", "sith")
 print("el comunicado reemplazado es:" + comunicado_reemplazado)
+
+planetas="Naboo, tatooine,Coruscant, Alderaan"
+planetas_lista=planetas.split(",")
+print(planetas_lista)
+print("La lista de planetas es:" + str(planetas_lista))
+print("El primer planeta de la lista es:" + planetas_lista[0])
+
+droide = "R2-D2"
+print("El droide es:" + droide) 
+print("El primer caracter del droide es:" + droide[0])  
+print("El segundo caracter del droide es:" + droide[1]) 
+print("El tercer caracter del droide es:" + droide[2])
+print("El cuarto caracter del droide es:" + droide[3])      
+print("El quinto caracter del droide es:" + droide[4])
+print("El sexto caracter del droide es:" + droide[-1])
+planeta = "      Naboo      "
+print("El planeta es:" + planeta)
+print("El planeta sin espacios es:" + planeta.strip())
