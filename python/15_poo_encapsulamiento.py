@@ -75,4 +75,4 @@ almacen.entrega_semillas(3)
 print("Entrega Yajirobe:")
 almacen.entrega_semillas(9)
 
-print("Cantidad de semillas disponibles:", almacen.get_cantidad())
+print("Cantidad de semillas disponibles:", almacen.get_cantidad()) 

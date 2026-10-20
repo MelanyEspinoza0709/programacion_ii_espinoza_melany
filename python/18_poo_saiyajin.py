@@ -1,4 +1,4 @@
-from 17_poo_guerrero import Guerrero
+from poo_guerrero import Guerrero
 class saiyajin(Guerrero):
     def __init__(self, nombre:str):
         super().__init__(nombre)
