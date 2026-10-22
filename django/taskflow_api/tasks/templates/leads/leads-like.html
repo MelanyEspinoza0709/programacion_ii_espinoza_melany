@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Kawaii 🎀</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background-color: #fff8fc;
+            color: #66556b;
+        }
+
+        header {
+            background-color: #ffd9e8;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 4px solid #f5b8d2;
+        }
+
+        header h1 {
+            color: #d76a9d;
+            font-size: 40px;
+        }
+
+        header p {
+            margin-top: 8px;
+        }
+
+        nav {
+            background-color: #f3dfff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #805c91;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e878aa;
+        }
+
+        .principal {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(#ffe7f1, #e9e2ff);
+        }
+
+        .principal h2 {
+            font-size: 35px;
+            color: #cc6b9b;
+            margin-bottom: 15px;
+        }
+
+        .principal p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #e995bc;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: #cf76a2;
+        }
+
+        section {
+            padding: 40px 25px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #cf78a5;
+            margin-bottom: 25px;
+        }
+
+        .categorias {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .categoria {
+            background-color: white;
+            border: 2px solid #f6cde0;
+            border-radius: 20px;
+            padding: 25px;
+            width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 10px #f4dce8;
+        }
+
+        .categoria span {
+            font-size: 45px;
+        }
+
+        .categoria h3 {
+            margin-top: 12px;
+            color: #ba79a4;
+        }
+
+        .frase {
+            background-color: #e9ddff;
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 22px;
+            color: #8764a0;
+            font-weight: bold;
+        }
+
+        .contenido {
+            display: flex;
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+            align-items: flex-start;
+        }
+
+        .articulos {
+            flex: 2;
+        }
+
+        .articulo {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            border: 2px solid #f7d9e7;
+        }
+
+        .articulo .dibujo {
+            background-color: #ffe9f2;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .articulo h3 {
+            color: #c66f9b;
+            margin-bottom: 10px;
+        }
+
+        .articulo p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #f1e7ff;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        aside h3 {
+            color: #9369b0;
+            margin-bottom: 15px;
+        }
+
+        aside p {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d8bce8;
+            border-radius: 15px;
+            margin-bottom: 12px;
+        }
+
+        button {
+            background-color: #ba91d6;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #9d70bd;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .galeria div {
+            background-color: #ffe4ef;
+            border-radius: 18px;
+            width: 150px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+        }
+
+        footer {
+            background-color: #ffd9e8;
+            text-align: center;
+            padding: 25px;
+            color: #98617e;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .contenido {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+            }
+
+            .principal h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎀 Bienvenidaa 🎀</h1>
+        <p>Un pequeño mundo lleno de ternura, colores y felicidad ♡</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#blog">Blog</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section class="principal" id="inicio">
+        <h1>🎀 {{ titulo }}{{ nombre }}{{ apellido }} 🎀</h1>
+        <p>Descubre un mundo bonito lleno de gatitos, dulces y cositas adorables.</p>
+        <a href="#categorias" class="boton">Explorar mundo kawaii ♡</a>
+    </section>
+
+    <section id="categorias">
+        <h2>🌷 Nuestras categorías 🌷</h2>
+
+        <div class="categorias">
+            <div class="categoria">
+                <span>🐱</span>
+                <h3>Gatitos</h3>
+                <p>Pequeños amigos adorables.</p>
+            </div>
+
+            <div class="categoria">
+                <span>🍓</span>
+                <h3>Postres</h3>
+                <p>Delicias dulces y bonitas.</p>
+            </div>
+
+            <div class="categoria">
+                <span>🎀</span>
+                <h3>Accesorios</h3>
+                <p>Detalles para decorar tu mundo.</p>
+            </div>
+
+            <div class="categoria">
+                <span>🧸</span>
+                <h3>Peluches</h3>
+                <p>Compañeros suaves y tiernos.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="frase">
+        ✨ "Haz de cada día un pequeño momento bonito" ✨
+    </div>
+
+    <section id="blog">
+        <h2>💗 Nuestro pequeño blog 💗</h2>
+
+        <div class="contenido">
+
+            <div class="articulos">
+
+                <article class="articulo">
+                    <div class="dibujo">🐱🌸</div>
+                    <h3>Cómo decorar tu espacio kawaii</h3>
+                    <p>
+                        Usa colores pastel, peluches, luces suaves y pequeños
+                        accesorios para crear un espacio bonito y acogedor.
+                    </p>
+                    <a href="#galeria" class="boton">Ver inspiración</a>
+                </article>
+
+                <article class="articulo">
+                    <div class="dibujo">🍰🍓</div>
+                    <h3>Un día lleno de dulzura</h3>
+                    <p>
+                        Prepara tu bebida favorita, disfruta de un postre
+                        delicioso y dedica tiempo a las cosas que te hacen feliz.
+                    </p>
+                    <a href="#contacto" class="boton">Descubrir más</a>
+                </article>
+
+                <article class="articulo">
+                    <div class="dibujo">🐰💜</div>
+                    <h3>Pequeñas cosas que alegran el día</h3>
+                    <p>
+                        Escuchar música, dibujar, escribir en tu diario
+                        o abrazar un peluche puede hacer tu día más especial.
+                    </p>
+                    <a href="#categorias" class="boton">Explorar</a>
+                </article>
+
+            </div>
+
+            <aside id="contacto">
+                <h3>💌 Club Kawaii</h3>
+                <p>¡Únete a nuestro pequeño mundo de ternura!</p>
+
+                <form onsubmit="alert('¡Gracias por unirte al Club Kawaii! 🎀'); return false;">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">¡Quiero unirme! ♡</button>
+                </form>
+
+                <p style="margin-top: 20px;">
+                    🌸 Gracias por visitar nuestro rinconcito 🌸
+                </p>
+            </aside>
+
+        </div>
+    </section>
+
+    <section id="galeria">
+        <h2>🩷 Nuestra galería adorable 🩷</h2>
+
+        <div class="galeria">
+            <div>🐱</div>
+            <div>🍓</div>
+            <div>🐰</div>
+            <div>🧁</div>
+            <div>🧸</div>
+            <div>🌷</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>🎀 Little Kawaii © 2026 🎀</p>
+        <p>Hecho con mucho cariño ♡</p>
+    </footer>
+
+</body>
+</html>
+
