@@ -46,6 +46,10 @@ class Estacionamiento(models.Model):
     def __str__(self):
         return self.nombre
 
+    
+    
+
+
 #uno a uno
 class Sensei(models.Model):
     nombre = models.CharField(max_length=100)
