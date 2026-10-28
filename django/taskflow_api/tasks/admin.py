@@ -11,3 +11,4 @@ class ProjectAdmin(admin.ModelAdmin):
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ("nombre", "created_at", "dirección", "capacidad_total", "espacios_disponibles")
     search_fields = ("nombre",)
+
