@@ -1,5 +1,6 @@
 from django.contrib import messages
-from django.shortcuts import redirect, render
+from django.db.models import ProtectedError
+from django.shortcuts import get_object_or_404, redirect, render
 
 from catalogo.models import Categoria
 from forms.categoria_form import CategoriaForm
@@ -28,4 +29,39 @@ def categoria_create(request):
         request,
         'catalogo/categorias/formulario.html',
         {'form': form},
+    )
+    
+def categoria_update(request, pk):
+    categoria = get_object_or_404(Categoria, pk=pk)
+    if request.method == 'POST':
+        form = CategoriaForm(request.POST, instance=categoria)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Categoría actualizada correctamente.')
+            return redirect('categoria_list')
+    else:
+        form = CategoriaForm(instance=categoria)
+
+    return render(
+        request,
+        'catalogo/categorias/formulario.html',
+        {'form': form},
+    )
+    
+def categoria_delete(request, pk):
+    categoria = get_object_or_404(Categoria, pk=pk)
+    if request.method == 'POST':
+        try:
+            categoria.delete()
+        except ProtectedError:
+            messages.error(request, 'No se puede eliminar la categoría porque tiene libros asociados.')
+            return redirect('categoria_list')
+        else:
+            messages.success(request, 'Categoría eliminada correctamente.')
+            return redirect('categoria_list')
+
+    return render(
+        request,
+        'catalogo/categorias/categoria_confirm_delete.html',
+        {'categoria': categoria},
     )

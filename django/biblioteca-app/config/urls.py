@@ -8,7 +8,9 @@ def redirect_to_catalogo(request):
 
 
 urlpatterns = [
+    path('',include('catalogo.urls.home_urls')),
     path('', redirect_to_catalogo),
     path('admin/', admin.site.urls),
     path('catalogo/', include('catalogo.urls.categoria_urls')),
+    path('catalogo/', include('catalogo.urls.libro_urls')),
 ]
