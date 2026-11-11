@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+</head>
+<body>
+    <h1>ִֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐ INICIO  ִֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐</h1>
+    <p>Bienvenido Sr(a).{{request.user.username}} a la Biblioteca</p>
+    <p>Explora nuestra colección de libros y categorías.</p>
+    <p>Menu Principal</p>
+    <ul>
+        <li><a href="{% url 'categoria_list' %}">Categorías</a></li>
+        <li><a href="{% url 'libro_list' %}">Libros</a></li>
+    </ul>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+    </form>
+</body>
+</html>

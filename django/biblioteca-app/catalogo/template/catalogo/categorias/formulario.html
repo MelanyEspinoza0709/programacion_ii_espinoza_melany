@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Crear categoría</title>
+    <title>{% if form.instance.pk %}Editar categoría{% else %}Crear categoría{% endif %}</title>
 </head>
 
 <body>
     <h1>Biblioteca</h1>
-    <h2>Registrar categoría</h2>
+    <h2>{% if form.instance.pk %}Editar categoría{% else %}Crear categoría{% endif %}</h2>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
@@ -22,5 +22,4 @@
         </p>
     </form>
 </body>
-
 </html>
