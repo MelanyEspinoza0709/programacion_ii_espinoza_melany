@@ -24,6 +24,9 @@
         <a href="{% url 'categoria_list' %}">Ver categorías</a>
     </button>
     <button>
+        <a href="{% url 'autor_list' %}">Ver autores</a>
+    </button>
+    <button>
         <a href="{% url 'home' %}">Volver al inicio</a>
     </button>
 
@@ -62,7 +65,7 @@
             {% for libro in libros %}
             <tr>
                 <td>{{ libro.titulo }}</td>
-                <td>{{ libro.autor }}</td>
+                <td>{% if libro.autor_ficha %}{{ libro.autor_ficha }}{% else %}{{ libro.autor }}{% endif %}</td>
                 <td>{{ libro.fecha_publicacion }}</td>
                 <td>
                     {% if perms.catalogo.change_libro %}
