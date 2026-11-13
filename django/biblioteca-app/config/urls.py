@@ -16,5 +16,6 @@ urlpatterns = [
     path('login/', RedirectView.as_view(pattern_name='login', permanent=False)),
     path('logout/', RedirectView.as_view(pattern_name='logout', permanent=False)),
     path('catalogo/', include('catalogo.urls.categoria_urls')),
+    path('catalogo/', include('catalogo.urls.autor_urls')),
     path('catalogo/', include('catalogo.urls.libro_urls')),
 ]
